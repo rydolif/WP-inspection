@@ -8,7 +8,13 @@
 				<span>Союз авторизованных сервисов <br>технического осмотра</span>
 			</a>
 
-			<a href="<?php the_field('policy', 'option'); ?>" target="_blank" class="footer__policy">Публичная оферта.</a>
+			<p>
+				<a href="<?php the_field('policy', 'option'); ?>" target="_blank" class="footer__policy">Публичная оферта</a>
+				<br>
+				<a href="<?php echo get_home_url(); ?>/sity/" target="_blank" class="footer__policy">Представительства САСТО</a>
+			</p>
+
+			
 
 			<p>
 				Обратная связь: <br>

@@ -22,7 +22,6 @@
    }
    add_action('wp_enqueue_scripts', 'wph_add_google_fonts');
 
-
 //------------------чистка від лишнього ----------------------
     remove_action('wp_head','feed_links_extra', 3); // убирает ссылки на rss категорий
     remove_action('wp_head','feed_links', 2); // минус ссылки на основной rss и комментарии
@@ -62,3 +61,37 @@
         ));
 
     }
+
+//------------------Register Custom Post Города----------------------
+    function sity_post_type() {
+
+        $labels = array(
+            'name'                  => _x( 'Города', 'Post Type General Name', 'text_domain' ),
+            'singular_name'         => _x( 'Города', 'Post Type Singular Name', 'text_domain' ),
+            'menu_name'             => __( 'Города', 'text_domain' ),
+            'all_items'             => __( 'Города', 'text_domain' ),
+            'add_new_item'          => __( 'Добавить Город', 'text_domain' ),
+            'add_new'               => __( 'Добавить Город', 'text_domain' ),
+        );
+        $args = array(
+            'label'                 => __( 'Бренды', 'text_domain' ),
+            'labels'                => $labels,
+            'supports'              => array( 'title'),// 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
+            'hierarchical'          => false,
+            'public'                => true,
+            'show_ui'               => true,
+            'show_in_menu'          => true,
+            'menu_position'         => 4,
+            'menu_icon'             => 'dashicons-images-alt2',
+            'show_in_admin_bar'     => true,
+            'show_in_nav_menus'     => true,
+            'can_export'            => true,
+            'has_archive'           => true,
+            'exclude_from_search'   => false,
+            'publicly_queryable'    => true,
+            'capability_type'       => 'page',
+        );
+        register_post_type( 'sity', $args );
+
+    }
+    add_action( 'init', 'sity_post_type', 0 );

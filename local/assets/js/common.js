@@ -5,19 +5,17 @@ $(function() {
   $('.tabs__wrap:first').show();
   $('.tabs ul a:first').addClass('registration__step_active');
 
-  $('.tabs ul a').click(function(event){
-    event.preventDefault();
-    $('.tabs ul a').removeClass('registration__step_active');
-    $(this).addClass('registration__step_active');
-    $('.tabs__wrap').hide();
-     var selectTab = $(this).attr('href');
-    $(selectTab).fadeIn();
-  });
+  // $('.tabs ul a').click(function(event){
+  //   event.preventDefault();
+  //   $('.tabs ul a').removeClass('registration__step_active');
+  //   $(this).addClass('registration__step_active');
+  //   $('.tabs__wrap').hide();
+  //    var selectTab = $(this).attr('href');
+  //   $(selectTab).fadeIn();
+  // });
  
   $('.registration__form_btn a').click(function(event){
     event.preventDefault();
-    $('.tabs ul a').removeClass('registration__step_active');
-    $(this).addClass('registration__step_active');
     $('.tabs__wrap').hide();
      var selectTab = $(this).attr('href');
     $(selectTab).fadeIn();
