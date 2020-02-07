@@ -487,6 +487,118 @@
 			z-index: -1
 
 
+.form-group
+	position: relative
+	display: flex
+	flex-wrap: wrap
+	margin-bottom: 25px !important
+
+	.caldera_ajax_error_block
+		position: absolute
+		top: -20px
+		left: 240px
+		font-size: 12px
+		background: red
+		color: #fff
+		border-radius: 10px
+		padding: 0 10px
+
+		span
+			color: #fff
+
+	div
+		max-width: 685px
+		width: 100%
+
+	p
+		padding: 15px 0 15px 15px
+		max-width: 685px
+
+	label
+		color: #aeacac !important
+		width: 220px !important
+		margin-right: 20px !important
+		margin-top: 12px !important
+
+	input, select
+		background-color: $white !important
+		height: 50px !important
+		border: 1px solid transparent !important
+		max-width: 685px !important
+		width: 100% !important
+		padding: 0 30px !important
+		color: $text !important
+		font-size: 18px !important
+
+		&::placeholder
+			color: $text !important
+
+		&:hover
+			border-color: rgba($accent, .3) !important
+
+		&:focus
+			border-color: $accent !important
+
+	.btn
+		position: relative !important
+		display: flex !important
+		justify-content: center !important
+		align-items: center !important
+		border: none !important
+		border-bottom: 2px solid #9b8a33 !important
+		outline: none !important
+		text-align: center !important
+		border-radius: 10px !important
+		transition: all .6s !important
+		height: 55px !important
+		background-color: $btn !important
+		font-weight: 700 !important
+		text-transform: uppercase !important
+		font-size: 24px !important
+		padding: 0 60px !important
+		max-width: fit-content !important
+		font-family: $fonts--title !important
+		color: $text !important
+		white-space: nowrap !important
+		max-width: 320px !important
+
+		&:hover,
+		&:focus
+			outline: none !important
+			text-decoration: none !important
+			cursor: pointer !important
+			background-color: $btn !important
+			color: #111 !important
+			box-shadow: 5px 5px 5px 0 rgba(#354465, .3) !important
+
+	.checkbox-inline
+		width: 685px !important
+		display: flex !important
+		align-items: center !important
+		margin: 0 !important
+		margin:
+			left: 0 !important
+			right: 25px !important
+		padding-left: 10px !important
+
+		input
+			width: 30px !important
+			height: 30px !important
+			margin:
+				right: 30px !important
+				left: 0 !important
+
+	.checkbox
+		label
+			width: 100% !important
+			display: flex !important
+
+			input
+				width: 20px !important
+				height: 20px !important
+				margin-right: 20px !important
+
+
 .registration
 	padding:
 		top: 30px
@@ -508,7 +620,6 @@
 		flex-wrap: wrap
 		margin-bottom: 85px
 
-
 		li
 			width: 33%
 
@@ -521,7 +632,7 @@
 			border: 1px solid #e8ecf0
 
 		&_active
-			background-color: #e8ecf0
+			background-color: #e8ecf0 !important
 			border-top: 1px solid $btn !important
 
 	&__form
@@ -537,7 +648,7 @@
 				width: 100%
 
 			p
-				padding: 15px 0 15px 15px
+				padding: 0 0 15px 15px
 				max-width: 685px
 
 			label
@@ -547,19 +658,19 @@
 				margin-top: 12px
 
 			input, select
-				background-color: $white
-				height: 50px
-				border: 1px solid transparent
-				max-width: 685px
-				width: 100%
-				padding: 0 30px
-				color: $text
+				background-color: $white !important
+				height: 50px !important
+				border: 1px solid transparent !important
+				max-width: 685px !important
+				width: 100% !important
+				padding: 0 30px !important
+				color: $text !important
 
 				&:hover
-					border-color: rgba($accent, .3)
+					border-color: rgba($accent, .3) !important
 
 				&:focus
-					border-color: $accent
+					border-color: $accent !important
 		
 			&--group
 				input
@@ -571,7 +682,7 @@
 
 		&_check
 			padding-left: 240px
-			margin-bottom: 60px
+			margin-bottom: 40px !important
 
 			label
 				max-width: 685px
@@ -583,38 +694,38 @@
 				margin-bottom: 0
 				margin-right: 0
 
-				&::before,
-				&::after
-					content: ''
-					position: absolute
-					left: 9px
-					top: 9px
+				// &::before,
+				// &::after
+				// 	content: ''
+				// 	position: absolute
+				// 	left: 9px
+				// 	top: 9px
 
-				&::before
-					width: 22px
-					height: 22px
-					border-radius: 50%
-					border: 1px solid #e0e3e7
-					background-color: #e0e3e7
+				// &::before
+				// 	width: 22px
+				// 	height: 22px
+				// 	border-radius: 50%
+				// 	border: 1px solid #e0e3e7
+				// 	background-color: #e0e3e7
 
-				&::after
-					width: 10px
-					height: 10px
-					border-radius: 50%
-					border: 1px solid $text
-					background: $text
-					left: 15px
-					top: 15px
-					transition: all .6s
+				// &::after
+				// 	width: 10px
+				// 	height: 10px
+				// 	border-radius: 50%
+				// 	border: 1px solid $text
+				// 	background: $text
+				// 	left: 15px
+				// 	top: 15px
+				// 	transition: all .6s
 
-			input[type="checkbox"]
-				display: none
+			// input[type="checkbox"]
+			// 	display: none
 
-			input[type="checkbox"]:checked + label::after
-				transform: scale(1)
+			// input[type="checkbox"]:checked + label::after
+			// 	transform: scale(1)
 
-			input[type="checkbox"] + label::after
-				transform: scale(0)
+			// input[type="checkbox"] + label::after
+			// 	transform: scale(0)
 
 			a
 				color: #99aebd
@@ -682,13 +793,13 @@
 					top: 10px
 					transition: all .6s
 
-			input[type="checkbox"]
+			input[type="radio"]
 				display: none
 
-			input[type="checkbox"]:checked + label::after
+			input[type="radio"]:checked + label::after
 				transform: scale(1)
 
-			input[type="checkbox"] + label::after
+			input[type="radio"] + label::after
 				transform: scale(0)
 
 
@@ -716,16 +827,16 @@
 		justify-content: space-between
 	
 	input
-		background-color: #fff
-		border-radius: 10px
-		width: 300px
-		height: 55px
-		line-height: 55px
-		margin-right: 15px
-		text-align: center
+		background-color: #fff !important
+		border-radius: 10px !important
+		width: 300px !important
+		height: 55px !important
+		line-height: 55px !important
+		margin-right: 15px !important
+		text-align: center !important
 
 		&::placeholder
-			line-height: 55px
+			line-height: 55px !important
 	
 	&__btn
 		position: relative
@@ -754,6 +865,9 @@
 			color: #111
 			box-shadow: 5px 5px 5px 0 rgba(#354465, .3)
 
+.center
+	text-align: center
+	
 
 .footer
 	padding: 37px 0

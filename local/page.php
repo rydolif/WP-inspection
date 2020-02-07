@@ -331,9 +331,7 @@
 
 					<!-- <?php echo do_shortcode( '[caldera_form id="CF5e3b193ade2fe"]' ) ?> -->
 				</div>
-
-
-<!-- 				
+<!-- 			
 				<form class="registration__wrap tabs">
 					
 					<ul class="registration__step">
@@ -553,9 +551,8 @@
 							<button class="btn">продолжить</button>
 						</div>
 					</div>
-
-				</form> -->
-
+				</form>
+ -->
 			</div>
 		</section>
 
